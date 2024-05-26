@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon Troops</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="assets/images/logo.png" alt="Lemon logo">
+        <nav>
+            <ul>
+                <div id="myLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="portofolio.html">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li id="todosMenu"><a href="#todos">Todos</a></li>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="banner">
+                <h2>It's time for <br><span>UMKM</span> now!</h2><br>
+                <h6>Empower your brand with influencer marketing</h6><br>
+                <div class="button-container">
+                    <button id="orderNowBtn">Order Now</button>
+                    <button id="contactUsBtn">Contact Us</button>
+                </div>
+            </div>
+            <!-- Overlay element -->
+            <div id="overlay" class="overlay"></div>
+            <!-- Popup element -->
+            <div id="orderPopup" class="popup">
+                <div class="popup-content">
+                    <h3>Order List</h3>
+                    <table id="orderTable">
+                        <thead>
+                            <tr>
+                                <th class="header">Service</th>
+                                <th class="header">Self Service</th>
+                                <th class="header">Full Service</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cell">Influencer search</td>
+                                <td class="cell">✅</td>
+                                <td class="cell">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">Campaign management</td>
+                                <td class="cell">❌</td>
+                                <td class="cell">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">Influencer management</td>
+                                <td class="cell">❌</td>
+                                <td class="cell">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="cell">Report</td>
+                                <td class="cell">❌</td>
+                                <td class="cell">✅</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button id="closePopupBtn">Close</button>
+                </div>
+            </div>
+            <div id="service" class="service">
+                <h2>Gabung di Lemon Troops</h2>
+                <div class="service-item-container">
+                    <div class="service-item">
+                        <img src="assets/images/service1.png" alt="Service 1">
+                        <h6>Jadi yang Paling Update <br><br></h6>
+                        <p>Dapatkan informasi update terbaru terkait fitur dan perkembangan influencer marketing</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="assets/images/service2.png" alt="Service 2">
+                        <h6>Perbesar Network <br><br></h6>
+                        <p>Bangun koneksi network dengan brand owner dan marketer lain di seluruh Indonesia</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="assets/images/service3.png" alt="Service 3">
+                        <h6>Intip Strategi yang Berhasil <br> dan Berimpact</h6>
+                        <p>Dapatkan Inspirasi dan pengalaman dari client Lemon Troops</p>
+                    </div>
+                </div>
+            </div>     
+            <div id="guide" class="guide">
+                <h2>Gabung dengan 3 langkah mudah</h2>
+                <div class="guide-container">
+                    <div class="guide-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <p>Klik gabung di komunitas Whatsapp</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <p>Isi formulir komunitas LEMON Troops terlebih dahulu untuk tim LEMON verifikasi</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <p>Sering-sering cek email kamu dalam 2 minggu ke depan.</p>
+                        </div>
+                    </div>
+                    <div class="guide-button">
+                        <button>Gabung di Komunitas WhatsApp</button>
+                    </div>
+                </div>
+            </div>  
+            <div class="client">
+                <h2>Brands We Have Worked With</h2>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="assets/images/apple.png" alt="Brand 1">
+                        <img src="assets/images/nestle.png" alt="Brand 2">
+                        <img src="assets/images/nissan.png" alt="Brand 3">
+                        <img src="assets/images/svarovski.png" alt="Brand 4">
+                        <img src="assets/images/toyota.png" alt="Brand 5">
+                        <img src="assets/images/wordpress.png" alt="Brand 6">
+                    </div>
+                </div>
+            </div>                                                    
+        </section>
+        <!-- Pop-up Todos -->
+        <div id="todosPopup" class="popup">
+            <h3>Todos</h3>
+            <button id="addTodoBtn">Add Todo</button>
+            <button id="seeTodosBtn">See Todos</button>
+            <div id="todoInputSection" style="display:none;">
+                <input type="text" id="newTodo" placeholder="Add a new todo">
+                <button id="saveTodoBtn">Save Todo</button>
+            </div>
+            <ul id="todoList" style="display:none;"></ul>
+            <button id="closeTodosPopupBtn">Close</button>
+        </div>
+        <!-- Overlay for the Pop-up -->
+        <div id="todosOverlay" class="overlay"></div>
+    </main>
+    <!-- Summary Section Above Footer -->
+    <div class="summary">
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@lemon.com</p>
+            <p>Phone: +1234567890</p>
+            <p>Jl Raya Tahunan-Batealit Km 7 Jepara, Jawa Tengah</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Lemon adalah layanan influencer marketing nomor 1 di Indonesia. Sejak 2019, kami telah berhasil membantu 3000+ brand menyelenggarakan campaign.</p>
+        </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            <p class="underline">Tips bekerja sama dengan influencer nano</p>
+            <p class="underline">Bingung pilih influencer nano apa mega? cek study casenya di sini</p>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lemon. All Rights Reserved.</p>
+    </footer>
+    <script src="assets/script/script.js"></script>
+</body>
+</html>
